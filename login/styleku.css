@@ -1,0 +1,372 @@
+* {
+    font-family: 'play', sans-serif;
+    padding: 0;
+    margin: 0;   
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+    min-height: 100vh;
+}
+
+.sidebar {
+    background-color: #112819;
+    width: 260px;
+    padding: 24px;
+    padding-top: 0;
+    display: flex;
+    box-sizing: border-box;
+    flex-direction: column;
+    transition: 0.3s ease-in-out;
+    overflow-y: auto;
+    border-right: 2px solid #ff9915;
+}
+
+.hidden {
+    width: 50px; /*buat toogle sembunyikan sidebar*/
+    padding: 0;
+    margin: 0;
+  }
+
+.sidebar .description-header {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 40px;
+    text-align: center;
+    color: #ffffff;
+}
+
+.sidebar.hidden .description-header {
+    display: none;
+}
+
+.sidebar .icon {
+    width: 40px;
+    height: 40px;
+}
+
+.sidebar a {
+    text-decoration: none;
+}
+
+.sidebar .header .list-item {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 12px 10px;
+    height: 100px;
+    box-sizing: border-box;
+    border-bottom: 1px solid #ffffff;
+}
+
+.sidebar .header .list-item .icon {
+    margin-right: 12px;
+}
+
+.sidebar.hidden .header .list-item .icon {
+    margin-right: 0;
+}
+
+.sidebar .header .logo img {
+    /*width: 100px;
+    height: 100px;*/
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.sidebar.hidden .header .logo img {
+    display: none;
+    transition: all ease-in .3s;
+}
+
+.sidebar .menu .list-item .description {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 16px;
+    text-align: center;
+    color: #ffffff;
+}
+
+.sidebar.hidden .menu .list-item .description {
+    display: none;
+}
+
+.sidebar .menu .list-item {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 12px 10px;
+    border-radius: 8px;
+    box-sizing: border-box;
+    transition: all ease-in .2s;
+}
+
+.sidebar .menu .list-item img {
+    width: 18px;
+    height: 18px;
+    margin-right: 12px;
+}
+
+.sidebar.hidden .menu .list-item img {
+    margin-right: 0;
+}
+
+.sidebar .menu .list-item:hover {
+    background-color: #ff9915;
+}
+
+.wrapper {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.navbar {
+    height: 50px;
+    background-color: #089986;
+    border-bottom: 1px solid #ff9915;
+    position: sticky;
+    top: 0;
+    display: flex;
+    align-items: center;
+    z-index: 1; /* set z-index untuk objek yang berada di atas tabel */
+  }
+
+  .kanan {
+    display: flex;
+    align-items: center;
+    flex-grow: 1;
+    justify-content: right;
+    padding-right: 50px;
+  }
+
+/* Toogle Menu */
+#tbmenu {
+    width: 30px;
+    position: absolute;
+    overflow: hidden;
+    margin: 10px;
+}
+
+#menu-label {
+    position: relative;
+    display: block;
+    height: 30px;
+    cursor: pointer;
+}
+
+#menu-checkbox {
+    display: none;
+}
+
+#tbmenu #menu-label img {
+    position: absolute;
+    left: 0;
+    width: 30px;
+    height: 30px;
+}
+
+#tbmenu #menu-label {
+    width: 30px;
+    height: 30px;
+}
+
+
+.menunav {
+    display: flex;
+    justify-content: space-between;
+    padding-left: 50px;
+    margin-left: 5px;
+}
+
+.menunav a {
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+}
+
+  
+.menunav img {
+    margin-right: 5px;
+    width: 30px;
+    height: 30px;
+  }
+
+.navbar .menunav .description {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 16px;
+    text-align: center;
+    color: #ffffff;
+}
+
+.navbar .menunav .description:hover {
+    color: #ff9915;
+}
+
+/*keluar login*/
+.kanan {
+    display: flex;
+    align-items: center;
+    flex-grow: 1;
+    justify-content: right;
+    padding-right: 50px;
+  }
+
+.kanan .akun img {
+    border: 1px solid #ffffff;
+    border-radius: 20px;
+    background-color: #ffffff;
+    padding: 3px;
+}
+
+.akun {
+    display: flex;
+    align-items: center;
+    padding-right: 10px;
+  }
+
+.akun .description {
+    margin-right: 10px;
+    color: #ffffff;
+}
+
+.kanan .keluar img {
+    border: 1px solid #ffffff;
+    border-radius: 20px;
+    background-color: #ffffff;
+    padding: 3px;
+}
+
+.kanan .keluar img:hover {
+    background-color: #ff9915;
+}
+
+.keluar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #ff9915;
+    padding: 5px;
+    border-radius: 10px;
+    background-color: #ff9915;
+}
+
+.keluar:hover, .keluar a:hover {
+    background-color: #ffffff;
+    color: #ff9915;
+}
+  
+.keluar a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #ffffff;
+    flex-direction: row;
+    text-decoration: none;
+}
+
+.keluar .description {
+    margin-right: 5px;
+}
+
+
+/*Untuk kontennya*/
+.main {
+    flex: 1;
+    padding: 20px;
+    background-color: #d8dbe0;
+}
+
+@media (max-width: 768px) {
+    .menunav {
+        display: none;
+    }
+}
+
+.kaki{
+    margin-top: 20px;
+    padding-top: 10px;
+    border-top: 1px solid #ffffff;
+}
+
+/* Gaya preloader */
+.preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(0, 0, 0, 0.5);
+    z-index: 9999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  /* Gaya preloader tersembunyi */
+  .preloader.hidden {
+    display: none;
+  }
+  
+  /* Gaya spinner */
+  .spinner {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 60px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  /* Gaya kotak-kotak */
+  .spinner > div {
+    width: 10px;
+    height: 10px;
+    margin: 2px;
+    background-color: #333;
+    animation: wave 0.5s infinite alternate;
+    border-radius: 10px;
+  }
+  
+  /* Animasi kotak-kotak */
+  @keyframes wave {
+    0% {
+      transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-20px);
+      }
+    100% {
+      transform: translateY(0);
+    }
+  }
+  
+  /* Warna kotak-kotak */
+  .spinner > div:nth-child(2) {
+    background-color: #555;
+    animation-delay: 0.1s;
+  }
+  
+  .spinner > div:nth-child(3) {
+    background-color: #888;
+    animation-delay: 0.2s;
+  }
+  
+  .spinner > div:nth-child(4) {
+    background-color: #999;
+    animation-delay: 0.3s;
+  }
+  
+  
