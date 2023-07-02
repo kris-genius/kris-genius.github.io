@@ -1,0 +1,138 @@
+html, body {
+    height: 100vh;
+}
+
+.global-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-image: url("login/img/bg-login.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.card.login-form {
+    display: flex;
+    flex-direction: row;
+    padding-left: 0;
+    width: 500px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px #00c4b3;
+  }
+
+.card-body {
+    display: flex;
+    flex-grow: 0;
+    align-items: center;
+    background-color: #00c4b3;
+    border-radius: 10px 0px 0px 10px;
+}
+
+.card-text {
+    font-family: 'play', sans-serif;
+    padding-top: 25px;
+    padding-left: 25px;
+    padding-right: 20px;
+    flex-grow: 2;
+    padding-bottom: 25px;
+}
+
+.card-title.text-center {
+    writing-mode: vertical-lr;
+    text-orientation: upright;
+    color: #fff;
+    font-weight: bold;
+}
+
+.teks {
+    font-size: 11px;
+    margin-top: 10px;
+    color: #999;
+}
+
+.judul {
+    border-bottom: 1px solid #00c4b3;
+}
+
+.judul .a {
+    margin-bottom: 0;
+}
+
+.judul .b {
+    font-weight: bold;
+}
+
+/* warna placeholder */
+::placeholder {
+    color: #999;
+  }
+  
+  /* gaya teks placeholder */
+  ::-webkit-input-placeholder {
+    font-size: small;
+  }
+  :-moz-placeholder {
+    font-style: italic;
+  }
+  ::-moz-placeholder {
+    font-style: italic;
+  }
+  :-ms-input-placeholder {
+    font-style: italic;
+  }
+
+.form-control {
+  border: none;
+}
+
+input[type='text'],
+input[type='password'] {
+  border-bottom: 1px solid #000 !important;
+  border-radius: 0;
+}
+
+.btn:hover {
+  background-color: #00c4b3;
+  border-color: #ff9915 !important;
+  box-shadow: 0 0 10px #ff9915;
+}
+
+.error {
+  color: red;
+  font-size: 14px;
+  font-weight: bold;
+  margin-top: 20px;
+  
+}
+
+.success {
+  color: green;
+  font-size: 14px;
+  font-weight: bold;
+  margin-top: 20px;
+}
+
+.warning {
+  color: orange;
+  font-size: 14px;
+  font-weight: bold;
+  margin-top: 20px;
+}
+
+.warning-icon {
+  color: orange;
+  font-size: 18px;
+  margin-right: 5px;
+}
+
+.kaki {
+  background-color: #d4d4d4;
+  font-family: 'play', sans-serif;
+  padding-top: 25px;
+  padding-left: 25px;
+  padding-right: 20px;
+  flex-grow: 2;
+  padding-bottom: 25px;
+}
